@@ -22,6 +22,36 @@ var app = (function () {
         /**
          * Clears the map contents.
          */
+
+        py: function(){
+          //const spawn = require('child_process').spawn;
+          //const process = spawn('python', ['../test.py']);
+          //process.stdout.on('data', data => {
+          //  console.log(data.toString());
+          //})
+          /*
+          const express = require('express')
+          const {spawn} = require('child_process');
+          const app = express()
+          const port = 3000
+
+          const python = spawn('python', ['test.py']);
+          childPython.stdout.on('data', (data) => {
+
+              console.log('stdout: ${data}');
+          });
+          */
+          /*
+          $.ajax({
+            type: "POST",
+            url: "test.py",
+            data: { param: text}
+          }).done(function( o ) {
+             // do something
+          });
+          /*
+          console.log("Hello World1");
+        },
         clearMap: function () {
             var i;
 
@@ -283,7 +313,7 @@ var app = (function () {
                     Then click "Find Courts!" to locate all the tennis courts in the region you have defined
                 </div>
                 <div id="form">
-                    <input type="submit" id="submit" value="Find Courts!" onclick="app.clearMap();app.mapIt();" />
+                    <input type="submit" id="submit" value="Find Courts!" onclick="app.clearMap();app.py();" />
                     <input type="reset" id="reset" value="Reset Selection" onclick="app.clearText();app.clearMap();" />
                 </div>
 
