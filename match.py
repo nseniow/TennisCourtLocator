@@ -1,27 +1,39 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-img_rgb = cv.imread('images/map3.png')
+import glob
+
+
+img_rgb = cv.imread('images/testcourts1.png')
 img_gray = cv.cvtColor(img_rgb, cv.COLOR_BGR2GRAY)
-template_grey = cv.imread('images/court3.png', 0)
 
-# template = cv.imread('images/court4.png', cv.IMREAD_UNCHANGED)
-# hannels = cv.split(template)
 
-# zero_channel = np.zeros_like(channels[0])
-# mask = np.array(channels[3])
-# mask[channels[3] == 0] = 1
-# mask[channels[3] == 100] = 0
-# transparent_mask = mask
-# cv.imwrite("mask.png", transparent_mask)
-# cv.imwrite("tem_grey.png", template_grey)
-# cv.imwrite("img_grey.png", img_gray)
+template1 = cv.imread('images/courts/court1.png')
+template2 = cv.imread('images/courts/court2.png')
+template3 = cv.imread('images/courts/court3.png')
+template4 = cv.imread('images/courts/court4.png')
+temp1 = cv.cvtColor(template1, cv.COLOR_BGR2GRAY)
+temp2 = cv.cvtColor(template2, cv.COLOR_BGR2GRAY)
+temp3 = cv.cvtColor(template3, cv.COLOR_BGR2GRAY)
+temp4 = cv.cvtColor(template4, cv.COLOR_BGR2GRAY)
 
-w, h = template_grey.shape[::-1]
-res = cv.matchTemplate(img_gray,template_grey,cv.TM_CCOEFF_NORMED)
-threshold = 0.7
-loc = np.where( res >= threshold)
-for pt in zip(*loc[::-1]):
-    cv.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
-    print("hit")
-cv.imwrite('images/res.png',img_rgb)
+template = [temp1, temp2, temp3, temp4]
+
+imagepath = ".\images\courts\map*.png"
+images = glob.glob(imagepath)
+
+for image in images:
+    img_rgb = cv.imread(image)
+    img_gray = cv.cvtColor(img_rgb, cv.COLOR_BGR2GRAY)
+    print(image)
+
+    for temp in template:
+
+        w, h = temp1.shape[::-1]
+        res = cv.matchTemplate(img_gray,temp,cv.TM_CCOEFF_NORMED)
+        threshold = 0.9
+        loc = np.where( res >= threshold)
+        for pt in zip(*loc[::-1]):
+            cv.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
+
+            print("X: ", pt[0], "Y: ", pt[1])
