@@ -2,8 +2,8 @@ import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv.imread('images/court4.png',0)
-img2 = cv.imread('images/court2.png', 0)
+img = cv.imread('images/map4.png',0)
+img2 = cv.imread('images/map2.png', 0)
 #img = cv.medianBlur(img,5)
 # ret,th1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
 # th2 = cv.adaptiveThreshold(img,255,cv.ADAPTIVE_THRESH_MEAN_C,\
