@@ -47,8 +47,13 @@ def find_tennis_court_breadcrumb():
             cv.imwrite(labeled_file_name, img_rgb)
             final_result_list.append((centerXCord, centerYCord, pt[0], pt[1]))
 
-    return final_result_list
+    with_offsets = list(map(apply_offset_to_coordinates, final_result_list))
+
+    for i in range(0, len(with_offsets)):
+        with_offsets[i] = str(with_offsets[i])[1:-1].replace(" ", "")
+
+    return with_offsets
 
 
 
-print(list(map(apply_offset_to_coordinates, find_tennis_court_breadcrumb())))
+print(find_tennis_court_breadcrumb())
