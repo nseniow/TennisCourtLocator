@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import pickle
 import re
@@ -15,7 +15,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def foo():
     msg = request.args.get('text')
     print(msg)
-    return "BLah"
+    return jsonify(['43.89422,-79.459207', '43.900228,-79.431756', '43.902095,-79.458712', '43.904878,-79.427869'])
 
 if __name__ == '__main__':
     app.run()
