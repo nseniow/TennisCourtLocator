@@ -193,8 +193,8 @@ var app = (function () {
                 if (!this.loaded) {
                     this.loaded = true;
                     // NOTE: We start with a MULTIPOLYGON; these aren't easily deconstructed, so we won't set this object to be editable in this example
-                    document.getElementById('wkt').value = 'MULTIPOLYGON (((40 40, 20 45, 45 30, 40 40)), ((20 35, 10 30, 10 10, 30 5, 45 20, 20 35), (30 20, 20 15, 20 25, 30 20)))';
-                    app.mapIt();
+                    document.getElementById('wkt').value = '';
+                    //app.mapIt();
                 }
             });
 
@@ -259,11 +259,11 @@ var app = (function () {
 }()); // Execute immediately
 </script>
 <body onload="app.gmap=app.init();">
-    <a href="http://github.com/arthur-e/Wicket">
-        <div id="forkme">&nbsp;
-        </div>
-    </a>
+
     <div id="head">
+      <div class="theTitle">
+        <font size="7">Tennis Court Locator</font>
+      </div>
         <div class="wrapper">
         </div>
     </div>
@@ -272,11 +272,9 @@ var app = (function () {
             <div id="canvas">
             </div>
             <div id="controls">
-                <div class="title">
-                    <div class="brand">Wicket</div>
-                </div>
+
                 <div class="text">
-                    Wicket is a lightweight Javascript library that reads and writes <a href="http://en.wikipedia.org/wiki/Well-known_text#Geometric_objects" target="_blaknk">Well-Known Text (WKT)</a> strings. It can also be extended to parse and to create geometric objects from various mapping frameworks, such as <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, the ESRI ArcGIS JavaScript API, and the Google Maps API.
+                    This is temp text
                 </div>
                 <div id="form">
                     <textarea type="text" name="wkt" id="wkt"></textarea>
@@ -289,17 +287,7 @@ var app = (function () {
     </div>
     <div id="foot">
         <div class="wrapper">
-            <div class="menu" id="nav">
-                <a href="/">Home</a>
-                <a href="mailto:kaendsle@mtu.edu">Contact Me</a>
-                <a href="http://github.com/arthur-e/Wicket">"Fork me on GitHub!"</a>
-            </div>
-            <div class="attribute">
-                Design &copy; 2012-2013 <a href="mailto:kaendsle@mtu.edu">K. Arthur Endsley</a>
-                <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">
-                    <img alt="Wicket is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License" style="float:right;border-width:0;vertical-align:middle;" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" />
-                </a><br />
-                Wicket is released under the <a href="https://github.com/arthur-e/Wicket/blob/master/LICENSE" target="_blank">GPL v3</a><br />
+
             </div>
         </div>
     </div>
