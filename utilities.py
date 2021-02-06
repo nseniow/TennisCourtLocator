@@ -1,5 +1,10 @@
 import math
 
+import numpy as np
+
+def distance(x1, y1, x2, y2):
+    return np.linalg.norm(np.array([x1, y1]) - np.array([x2, y2]))
+
 def add_meters_to_coordinates(coordinates, long_offset, lat_offset): #should be 275 meters?
     lat = coordinates[0]
     long = coordinates[1]
