@@ -4,7 +4,7 @@ import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv.imread('images/map5.png', 0)
+img = cv.imread('images/map1.png', 0)
 
 cannyThres1 = 200
 cannyThres2 = 200
