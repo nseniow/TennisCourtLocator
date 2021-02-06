@@ -1,7 +1,8 @@
 import cv2 as cv
 import numpy as np
 import glob
-
+import math
+from utilities import *
 
 def find_tennis_court_breadcrumb():
 
@@ -49,4 +50,5 @@ def find_tennis_court_breadcrumb():
     return final_result_list
 
 
-print(find_tennis_court_breadcrumb())
+
+print(list(map(apply_offset_to_coordinates, find_tennis_court_breadcrumb())))

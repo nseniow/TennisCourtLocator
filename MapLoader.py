@@ -5,23 +5,10 @@ import time
 import random
 import re
 import itertools
+from utilities import *
 
 f = open("apikey.txt", "r")
 apikey = f.read()
-
-def add_meters_to_coordinates(coordinates, long_offset, lat_offset): #should be 275 meters?
-    lat = coordinates[0]
-    long = coordinates[1]
-    R = 6378137
-
-    dLat = lat_offset / R
-    dLong = long_offset / (R * math.cos(math.pi * lat / 180))
-
-    latO = lat + dLat * 180/math.pi
-    longO = long + dLong * 180/math.pi
-
-    return round(latO, 6), round(longO, 6)
-
 
 
 def download_image(lat, long, zoom = 18, size = 640, scale = 2, maptype = "satellite", key = apikey):
