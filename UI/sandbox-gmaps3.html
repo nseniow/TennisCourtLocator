@@ -25,28 +25,11 @@ var app = (function () {
          */
 
         py: function(){
-          //const spawn = require('child_process').spawn;
-          //const process = spawn('python', ['../test.py']);
-          //process.stdout.on('data', data => {
-          //  console.log(data.toString());
-          //})
-          /*
-          const express = require('express')
-          const {spawn} = require('child_process');
-          const app = express()
-          const port = 3000
-
-          const python = spawn('python', ['test.py']);
-          childPython.stdout.on('data', (data) => {
-
-              console.log('stdout: ${data}');
-          });
-          */
 
           $.ajax({
             type: "GET",
             url: "http://127.0.0.1:5000/foo",
-            data: {"text": "this is from javascript fuck you"}
+            data: {"text": document.getElementById('wkt').value}
           }).done(function( o ) {
              console.log("Fuck me")
           });
