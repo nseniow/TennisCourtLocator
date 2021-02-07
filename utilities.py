@@ -28,8 +28,4 @@ def apply_offset_to_coordinates(tup):
     yoffset *= -275/1280
     xoffset *= 275/1280
 
-    print("X", xoffset)
-    print("Y", yoffset)
-
-
     return add_meters_to_coordinates((lat, long), xoffset, yoffset)
