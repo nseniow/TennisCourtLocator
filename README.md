@@ -42,4 +42,4 @@ To use this project yourself, you can clone the repo, create your own google api
 
 ## Shoutouts
 
-Special thanks to arthur-e and his [wiket repo](https://github.com/arthur-e/Wicket) that served as a base for our user interface
+Special thanks to arthur-e and his open source [wiket repo](https://github.com/arthur-e/Wicket) that served as a base for our user interface
