@@ -5,6 +5,8 @@ import re
 import nltk as nlp
 import ast
 import time
+from find_tennis_court import *
+from MapLoader import *
 
 app = Flask(__name__)
 
@@ -14,13 +16,12 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @app.route('/foo', methods=['GET','OPTIONS'])
 @cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def foo():
-    msg = request.args.get('text')
-    print(msg)
-    time.sleep(1.8)
-    #43.89422,-79.459207
-    #return jsonify(['43.89422,-79.459207', '43.900228,-79.431756', '43.902095,-79.458712', '43.904878,-79.427869'])
+    WKT_argument = request.args.get('text')
+    print(WKT_argument)
 
-    list = [{"lat": 43.89422, "lng": -79.459207}, {"lat": 43.900228, "lng": -79.431756}, {"lat": 43.902095, "lng": -79.458712}, {"lat": 43.904878, "lng": -79.427869}]
+    if WKT_argument != "":
+        WKT_to_Images(WKT_argument)
+    list = find_tennis_court()
     return jsonify(list)
 
 if __name__ == '__main__':

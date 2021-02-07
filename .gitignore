@@ -3,3 +3,4 @@ venv/
 apikey.txt
 .idea/
 images/
+*.jpg

@@ -6,10 +6,10 @@ from utilities import *
 
 def find_tennis_court_template_matching(image):
 
-    template1 = cv.imread('images/court1.png')
-    template2 = cv.imread('images/court2.png')
-    template3 = cv.imread('images/court3.png')
-    template4 = cv.imread('images/court4.png')
+    template1 = cv.imread('sample_courts/court1.png')
+    template2 = cv.imread('sample_courts/court2.png')
+    template3 = cv.imread('sample_courts/court3.png')
+    template4 = cv.imread('sample_courts/court4.png')
     temp1 = cv.cvtColor(template1, cv.COLOR_BGR2GRAY)
     temp2 = cv.cvtColor(template2, cv.COLOR_BGR2GRAY)
     temp3 = cv.cvtColor(template3, cv.COLOR_BGR2GRAY)
@@ -206,7 +206,4 @@ def find_tennis_court(list_of_images=None):
     for lat, lng in with_offsets:
         final_dict_list.append({"lat": lat, "lng": lng})
 
-    return with_offsets
-
-a = find_tennis_court()
-print(a)
+    return final_dict_list
