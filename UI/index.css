@@ -21,7 +21,7 @@ a:visited {color:#460;text-decoration:none;}
 #canvas,
 #controls {float:left;}
 #controls {width:290px;height:100%;padding:0 0 0 10px;text-align:justify;background:transparent;position:relative;top:-80px;}
-#controls .text {margin:90px 0 0;}
+#controls .text {margin:82px 0 0;}
 #controls a:hover,
 #controls a:active {text-decoration:underline;}
 #forkme {width:141px;height:141px;z-index:9999;position:absolute;left:0;top:4px;background:transparent url(https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png) no-repeat left top;}
