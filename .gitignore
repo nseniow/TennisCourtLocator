@@ -1,5 +1,4 @@
 venv/
-*.png
 apikey.txt
 .idea/
 images/

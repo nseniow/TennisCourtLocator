@@ -291,18 +291,27 @@ var app = (function () {
 </script>
 <body onload="app.gmap=app.init();">
 
+
     <div id="head">
+
       <div class="theTitle">
-        <font size="7">Tennis Court Locator</font>
+        <h1 style="font-size:3vw">Tennis Court Locator</h1>
       </div>
         <div class="wrapper">
         </div>
     </div>
     <div id="ribbon">
+      <!--
+      <img src="nadal.png" align=left width=31%;>
+      <img src="fed.jpg" align=right width=10%;>
+      -->
+      <div style="background-image: url('background.png');">
         <div class="wrapper">
             <div id="canvas">
             </div>
+
             <div id="controls">
+
 
                 <div class="text">
                     Select on the map using the tools at the top or enter <a href="http://en.wikipedia.org/wiki/Well-known_text#Geometric_objects" target="_blaknk">Well-Known Text (WKT)</a> below to select the area you wish to search in for tennis courts
@@ -320,6 +329,8 @@ var app = (function () {
 
             </div>
         </div>
+
+
     </div>
     <div id="foot">
         <div class="wrapper">
