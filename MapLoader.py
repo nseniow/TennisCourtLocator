@@ -53,7 +53,7 @@ def save_images_from_coordinates(coordinates):
     all_image_coordinates = get_all_image_coordinates_from_bounding_rectangle(bouding_rectangle)
     filenames = []
     for i in all_image_coordinates:
-        random_delay = random.randint(5000,15000)
+        random_delay = random.randint(0,1500)
         time.sleep(random_delay/1000)
         filenames.append(download_image(i[0], i[1]))
         print("downloaded: " + str(i[0]) + "_" + str(i[1]) + " after a delay of " + str(random_delay))
@@ -91,8 +91,3 @@ def WKT_to_Images(input_string):
     return save_images_from_coordinates(convert_input_string_to_coordinate_list(input_string))
 
 #print(WKT_to_Images("POLYGON((-75.73874733380869 45.254549821048876,-75.73596856526926 45.254549821048876,-75.73596856526926 45.25331117236983,-75.73874733380869 45.25331117236983,-75.73874733380869 45.254549821048876))"))
-
-
-
-
-
