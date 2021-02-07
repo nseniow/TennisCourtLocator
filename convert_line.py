@@ -4,7 +4,8 @@ import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv.imread('images/map1.png', 0)
+img = cv.imread('images/map6.png', 0)
+img_color = cv.imread('images/map6.png')
 
 cannyThres1 = 200
 cannyThres2 = 200
@@ -18,7 +19,7 @@ theta = np.pi / 180  # angular resolution in radians of the Hough grid
 threshold = 15  # minimum number of votes (intersections in Hough grid cell)
 min_line_length = 25  # minimum number of pixels making up a line
 max_line_gap = 12  # maximum gap in pixels between connectable line segments
-line_image = np.copy(img) * 0  # creating a blank to draw lines on
+line_image = np.copy(img_color) * 0  # creating a blank to draw lines on
 lines = cv.HoughLinesP(edges, rho, theta, threshold, np.array([]),
                        min_line_length, max_line_gap)
 
@@ -119,6 +120,7 @@ for i in range(len(parallel_long_pairs)):
     cv.line(line_image, (fx1, fy1), (fx2, fy2), (255, 0, 0), 3)
     cv.line(line_image, (sx1, sy1), (sx2, sy2), (255, 0, 0), 3)
 
+img = cv.imread('images/map6.png')
 lines_edges = cv.addWeighted(img, 0.8, line_image, 1, 0)
 
 cv.imwrite("labelled.png", lines_edges)
