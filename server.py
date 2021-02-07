@@ -4,6 +4,7 @@ import pickle
 import re
 import nltk as nlp
 import ast
+import time
 
 app = Flask(__name__)
 
@@ -15,7 +16,12 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def foo():
     msg = request.args.get('text')
     print(msg)
-    return jsonify(['43.89422,-79.459207', '43.900228,-79.431756', '43.902095,-79.458712', '43.904878,-79.427869'])
+    time.sleep(1.8)
+    #43.89422,-79.459207
+    #return jsonify(['43.89422,-79.459207', '43.900228,-79.431756', '43.902095,-79.458712', '43.904878,-79.427869'])
+
+    list = [{"lat": 43.89422, "lng": -79.459207}, {"lat": 43.900228, "lng": -79.431756}, {"lat": 43.902095, "lng": -79.458712}, {"lat": 43.904878, "lng": -79.427869}]
+    return jsonify(list)
 
 if __name__ == '__main__':
     app.run()
