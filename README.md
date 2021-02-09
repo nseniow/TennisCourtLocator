@@ -6,13 +6,13 @@ https://www.youtube.com/watch?v=tEGXiUcDwog
 
 ## Pictures
 
-![](DemoImage1.png)
+![](/demo_images/DemoImage1.png)
 
-![](DemoImage2.png)
+![](/demo_images/DemoImage2.png)
 
-![](DemoImage3.png)
+![](/demo_images/DemoImage3.png)
 
-![](DemoImage4.png)
+![](/demo_images/DemoImage4.png)
 
 ## Inspiration
 Exercise is important for both physical and mental health, especially during a pandemic. However, it has been rather difficult to find safe ways to exercise with friends given the social distancing measures. Scientific research shows that the safest way to exercise outdoors is through playing tennis.
@@ -42,4 +42,4 @@ To use this project yourself, you can clone the repo, create your own google api
 
 ## Shoutouts
 
-Special thanks to arthur-e and his open source [wiket repo](https://github.com/arthur-e/Wicket) that served as a base for our user interface
+Thanks to arthur-e and his open source [wiket repo](https://github.com/arthur-e/Wicket) that served as a base for our user interface

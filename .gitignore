@@ -2,4 +2,6 @@ venv/
 apikey.txt
 .idea/
 images/
+labeled_images/
 *.jpg
+__pycache__
