@@ -2,7 +2,7 @@
 
 # Now known as Topografind with expanded capabilities!
 
-CourtFind! has rebranded to be Topografind! A new Machine Learning based topographical analysis platform that can now do so much more than just find tennis courts. Unfortunately, that means this project is now closed source and this github repo will no longer be updated
+CourtFind! has rebranded to be Topografind! A new Machine Learning based topographical analysis platform. Previously developed as CourtFind!, Topografind can now do so much more than just find tennis courts. Unfortunately, that means this project is now closed source and this github repo will no longer be updated
 
 ## Live Demo
 
